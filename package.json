@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Let's explore the port and adapter pattern on js http servers.",
   "devDependencies": {
-    "mocha": "^2.2.4"
+    "mocha": "^2.2.4",
+    "request": "^2.55.0"
   },
   "scripts": {
     "test": "mocha"
