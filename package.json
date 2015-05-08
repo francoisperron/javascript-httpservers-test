@@ -1,0 +1,8 @@
+{
+  "name": "javascript-httpservers-test",
+  "version": "1.0.0",
+  "description": "Let's explore the port and adapter pattern on js http servers.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
