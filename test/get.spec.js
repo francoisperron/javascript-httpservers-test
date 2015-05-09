@@ -15,12 +15,19 @@
         server.stop();
     });
 
-    describe('The http server', function () {
-        it('should return 200', function (done) {
+    describe("The http server", function () {
+        it("should return 200", function (done) {
             request("http://localhost:5000", function (error, response, body) {
                 assert.equal(response.statusCode, 200);
-                done();
+                done(error);
             })
-        })
+        });
+
+        it("should return hello on /hello", function(done) {
+            request("http://localhost:5000/hello", function (error, response, body){
+                assert.equal(body, "hello");
+                done(error);
+            })
+        });
     })
 }());

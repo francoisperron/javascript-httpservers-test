@@ -1,11 +1,13 @@
 (function () {
     "use strict";
 
-    var httpServer = require("http-server");
-
+    var http = require("http");
 
     var Server = function () {
-        this.server = httpServer.createServer();
+        this.server = http.createServer(function(request, response){
+            response.write("hello");
+            response.end();
+        });
     };
     module.exports = Server;
 

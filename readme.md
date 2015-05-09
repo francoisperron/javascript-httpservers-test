@@ -3,3 +3,11 @@
 Let's explore the [port and adapter] pattern on a http server.
 
 [port and adapter]:http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
+
+#### TODO
+
+- X get on /hello returns hello
+- get on /bye returns bye
+- extract routing from server
+- change to node http server
