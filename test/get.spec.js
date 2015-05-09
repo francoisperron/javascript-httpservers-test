@@ -29,5 +29,12 @@
                 done(error);
             })
         });
+
+        it("should return bye on /bye", function(done) {
+            request("http://localhost:5000/bye", function (error, response, body){
+                assert.equal(body, "bye");
+                done(error);
+            })
+        });
     })
 }());
