@@ -3,16 +3,14 @@
 
     var assert = require("assert");
     var request = require("request");
-    var Server = require("../src/server");
-    var server;
+    var app = require("../src/app");
 
     before(function () {
-        server = new Server();
-        server.start();
+        app.start()
     });
 
     after(function () {
-        server.stop();
+        app.stop();
     });
 
     describe("The http server", function () {
