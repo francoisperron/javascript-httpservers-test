@@ -1,8 +1,8 @@
 (function () {
     "use strict";
 
-    var home = require("../endpoints/home-endpoint");
     var Greetings = require("../endpoints/greetings-endpoint");
+    var home = new Greetings("");
     var hello = new Greetings("hello");
     var bye = new Greetings("bye");
 
