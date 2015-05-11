@@ -1,10 +1,10 @@
 (function () {
     "use strict";
 
-    var Greetings = require("../endpoints/greetings-endpoint");
-    var home = new Greetings("");
-    var hello = new Greetings("hello");
-    var bye = new Greetings("bye");
+    var Text = require("../endpoints/text-endpoint");
+    var home = new Text("");
+    var hello = new Text("hello");
+    var bye = new Text("bye");
 
     var routes = {
         "/": home,

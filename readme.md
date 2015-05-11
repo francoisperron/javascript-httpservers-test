@@ -11,4 +11,5 @@ Let's explore the [port and adapter] pattern on a http server.
 - X get on /bye returns bye
 - X extract routing from server
 - X change to node http server
+- move routes building outside of router
 - change to another http server
