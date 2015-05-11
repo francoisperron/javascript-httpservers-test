@@ -1,15 +1,10 @@
 (function () {
     "use strict";
 
-    var Text = require("../endpoints/text-endpoint");
-    var home = new Text("");
-    var hello = new Text("hello");
-    var bye = new Text("bye");
+    var routes = {};
 
-    var routes = {
-        "/": home,
-        "/hello": hello,
-        "/bye": bye
+    exports.routing = function (someRoutes) {
+        routes = someRoutes;
     };
 
     exports.handle = function (request, response) {
