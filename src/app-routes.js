@@ -2,19 +2,14 @@
     "use strict";
 
     var TextEndpoint = require("./endpoints/text-endpoint");
+    var StaticFileEndpoint= require("./endpoints/static-file-endpoint");
 
-    var home = new TextEndpoint("");
-    var hello = new TextEndpoint("hello");
-    var bye = new TextEndpoint("bye");
-
-    var Favicon = require("./endpoints/favicon-endpoint");
-    var favicon = new Favicon();
-
-    exports.routes = {
-        "/": home,
-        "/hello": hello,
-        "/bye": bye,
-        "/favicon.ico": favicon
+    module.exports = {
+        "/": new TextEndpoint(""),
+        "/hello": new TextEndpoint("hello"),
+        "/bye": new TextEndpoint("bye"),
+        "/favicon.ico": new StaticFileEndpoint("./src/assets/favicon.ico"),
+        "/any.css": new StaticFileEndpoint("./src/assets/any.css")
     };
 
 }());

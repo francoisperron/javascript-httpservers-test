@@ -8,9 +8,7 @@
     };
 
     exports.handle = function (request, response) {
-        if (routes[request.url] != undefined) {
-            routes[request.url].handle(response);
-        }
+        routes[request.url] != undefined ? routes[request.url].handle(response) : response.writeHead(404);
         response.end();
     };
 
