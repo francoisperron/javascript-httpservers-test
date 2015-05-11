@@ -12,8 +12,8 @@
         server.start();
     };
 
-    exports.stop = function () {
-        server.stop();
+    exports.stop = function (done) {
+        server.stop(done);
     };
 
 }());

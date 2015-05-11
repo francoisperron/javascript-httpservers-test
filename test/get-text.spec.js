@@ -5,18 +5,26 @@
     var request = require("request");
     var app = require("../src/app");
 
-    before(function () {
-        app.start(5000)
-    });
+    describe("Get on text endpoints", function () {
 
-    after(function () {
-        app.stop();
-    });
+        before(function () {
+            app.start(5000)
+        });
 
-    describe("The http server", function () {
+        after(function () {
+            app.stop();
+        });
+
         it("should return 200", function (done) {
             request("http://localhost:5000", function (error, response, body) {
                 assert.equal(response.statusCode, 200);
+                done(error);
+            })
+        });
+
+        it("should return text/plain", function (done) {
+            request("http://localhost:5000", function (error, response, body) {
+                assert.equal(response.headers["content-type"], "text/plain");
                 done(error);
             })
         });

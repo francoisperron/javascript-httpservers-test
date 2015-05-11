@@ -7,10 +7,14 @@
     var hello = new TextEndpoint("hello");
     var bye = new TextEndpoint("bye");
 
+    var Favicon = require("./endpoints/favicon-endpoint");
+    var favicon = new Favicon();
+
     exports.routes = {
         "/": home,
         "/hello": hello,
-        "/bye": bye
+        "/bye": bye,
+        "/favicon.ico": favicon
     };
 
 }());

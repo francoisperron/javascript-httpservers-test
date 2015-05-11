@@ -7,6 +7,7 @@
     "request": "^2.55.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "serve": "node src/web.js"
   }
 }

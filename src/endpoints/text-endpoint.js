@@ -7,7 +7,7 @@
     module.exports = TextEndpoint;
 
     TextEndpoint.prototype.handle = function (response) {
-        response.setHeader("Content-Type", "text/plain");
+        response.setHeader("content-type", "text/plain");
         response.write(this.text);
     };
 
