@@ -1,8 +1,8 @@
 (function () {
     "use strict";
 
-    var Server = require("./server");
-    var router = require("./router");
+    var Server = require("./http/server");
+    var router = require("./http/router");
     var server;
 
     exports.start = function (port) {
