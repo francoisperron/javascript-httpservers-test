@@ -6,7 +6,7 @@
     var app = require("../src/app");
 
     before(function () {
-        app.start()
+        app.start(5000)
     });
 
     after(function () {

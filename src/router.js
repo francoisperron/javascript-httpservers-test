@@ -1,27 +1,20 @@
 (function () {
     "use strict";
 
-    var handleHello = function (response) {
-        response.write("hello");
-    };
-
-    var handleBye = function (response) {
-        response.write("bye");
-    };
-
-    var handleHome = function (response) {
-        response.write("");
-    };
+    var appRoutes = require("./appRoutes");
 
     var routes = {
-        "/": handleHome,
-        "/hello": handleHello,
-        "/bye": handleBye
+        "/": appRoutes.handleHome,
+        "/hello": appRoutes.handleHello,
+        "/bye": appRoutes.handleBye
     };
 
     exports.handle = function (request, response) {
-        routes[request.url](response);
-        response.end();
+        if(routes[request.url] != undefined){
+            routes[request.url](response);
+        }
+
+       response.end();
     };
 
 }());

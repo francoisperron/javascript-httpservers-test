@@ -3,13 +3,14 @@
 
     var http = require("http");
 
-    var Server = function (router) {
+    var Server = function (port, router) {
+        this.port = port;
         this.server = http.createServer(router.handle);
     };
     module.exports = Server;
 
     Server.prototype.start = function () {
-        this.server.listen(5000);
+        this.server.listen(this.port);
     };
 
     Server.prototype.stop = function () {

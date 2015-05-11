@@ -8,6 +8,7 @@ Let's explore the [port and adapter] pattern on a http server.
 #### TODO
 
 - X get on /hello returns hello
-- get on /bye returns bye
-- extract routing from server
-- change to node http server
+- X get on /bye returns bye
+- X extract routing from server
+- X change to node http server
+- change to another http server
